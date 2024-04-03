@@ -1,23 +1,14 @@
 # MalDDalPatcher
-UM:PD Hachimi mod patching tool for Android (translation/game enhancement patch).
-
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Q5Q3QEHRA)
-
-MalDDalPatcher is an UM:PD Hachimi mod patching tool for Android. Its main purpose is to provide you
-with translation patches within the game, among other features.
-
-For more information, please check out [Hachimi](https://github.com/Hachimi-Hachimi/Hachimi).
+Umamusme patching tool for Android (translation/game enhancement patch).
 
 # Requirements
-- Android 7.0 or above (***EXCEPT*** for Android 11, see [Hachimi#3](https://github.com/Hachimi-Hachimi/Hachimi/issues/3))
+- Android 7.0 or above
 
 # Download
 Download the latest release from the [Releases page](https://github.com/Seungpyo1007/MalDDalPatcher/releases).
 
 # How to use
 ## Patching the app
-The app can be patched with [Hachimi](https://github.com/Hachimi-Hachimi/Hachimi) which brings new
-features such as translations and tweaks to the game itself. You can pick whether to patch the
 APK file of the already installed app, or select an APK file and patch it.
 
 ### Rooted
@@ -38,12 +29,6 @@ the app, you can use the game's Data Link feature.
 **Note 2:** The signing key is unique for each installation of UmaPatcher. It is also a self-signed
 key; during installation, Google Play Protect will warn you of installing an untrusted app. **You
 can safely ignore this and tap on More Info -> Install anyways to continue installation.**
-
-## Setting up Hachimi
-Just open the patched app that you've installed and follow Hachimi's first time setup wizard.
-
-**Tip:** You can access the menu by pressing the Volume up + Volume down keys on your device at the
-same time.
 
 # License
 [Apache License 2.0](LICENSE)
