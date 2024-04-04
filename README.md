@@ -34,13 +34,8 @@ can safely ignore this and tap on More Info -> Install anyways to continue insta
 # License
 [Apache License 2.0](LICENSE)
 
-#Thanks to
-[UmaPatcher][https://github.com/LeadRDRK/UmaPatcher]
-[All translators][fprtkdl][vanaBV]  
-[The original umamusume-db-translate](https://github.com/FabulousCupcake/umamusume-db-translate)  
-[umamusume-localify]
-[umamusu-translate]
-[Umamusume Translation Discord](https://discord.gg/b2TDQKpu9v)  
+# Thanks to
+
 
 [UmaPatcher]: [https://github.com/LeadRDRK/UmaPatcher]
 [umamusume-localify]: https://github.com/GEEKiDoS/umamusume-localify
