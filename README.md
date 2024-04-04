@@ -1,5 +1,4 @@
-[![Discord](https://img.shields.io/discord/1222345682749493259?logo=discord&logoColor=000000label=Discord)](https://discord.gg/b2TDQKpu9v)
-
+[![](https://dcbadge.vercel.app/api/server/b2TDQKpu9v)](https://discord.gg/b2TDQKpu9v)
 # MalDDalPatcher
 Umamusme patching tool for Android (translation/game enhancement patch).
 
@@ -35,7 +34,7 @@ can safely ignore this and tap on More Info -> Install anyways to continue insta
 # License
 [Apache License 2.0](LICENSE)
 
-# Thanks to
+#Thanks to
 [UmaPatcher][https://github.com/LeadRDRK/UmaPatcher]
 [All translators][fprtkdl][vanaBV]  
 [The original umamusume-db-translate](https://github.com/FabulousCupcake/umamusume-db-translate)  
