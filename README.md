@@ -2,7 +2,7 @@
 Umamusme patching tool for Android (translation/game enhancement patch).
 
 # Link
-[![Discord](https://img.shields.io/discord/980222697151807488?logo=discord&logoColor=010203label=Discord)](https://discord.gg/b2TDQKpu9v)
+[![Discord](https://img.shields.io/discord/1222345682749493259?logo=discord&logoColor=000000label=Discord)](https://discord.gg/b2TDQKpu9v)
 
 # Requirements
 - Android 9.0 or above
