@@ -37,10 +37,11 @@ can safely ignore this and tap on More Info -> Install anyways to continue insta
 # Thanks to
 [UmaPatcher][https://github.com/LeadRDRK/UmaPatcher]
 
-[UmaPatcher]: [https://github.com/LeadRDRK/UmaPatcher]
-[umamusume-localify]: https://github.com/GEEKiDoS/umamusume-localify
-[tlg]: https://github.com/MinamiChiwa/Trainers-Legend-G
-[db-translate project]: https://github.com/noccu/umamusume-db-translate
+[umamusume-localify][https://github.com/GEEKiDoS/umamusume-localify]
+
+[tlg][https://github.com/MinamiChiwa/Trainers-Legend-G]
+
+[db-translate project][https://github.com/noccu/umamusume-db-translate]
 
 [tl-progress]: docs/tl-progress.md
 [translating]: docs/translating.md
