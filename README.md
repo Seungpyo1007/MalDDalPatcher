@@ -2,7 +2,7 @@
 Umamusme patching tool for Android (translation/game enhancement patch).
 
 # Link
-[![](https://dcbadge.vercel.app/api/server/b2TDQKpu9v)](https://discord.gg/b2TDQKpu9v)
+[![Discord](https://img.shields.io/discord/980222697151807488?logo=discord&logoColor=010203label=Discord)](https://discord.gg/b2TDQKpu9v)
 
 # Requirements
 - Android 9.0 or above
@@ -35,3 +35,20 @@ can safely ignore this and tap on More Info -> Install anyways to continue insta
 
 # License
 [Apache License 2.0](LICENSE)
+
+#Thanks to
+[UmaPatcher][https://github.com/LeadRDRK/UmaPatcher]
+[All translators][fprtkdl][vanaBV]  
+[The original umamusume-db-translate](https://github.com/FabulousCupcake/umamusume-db-translate)  
+[umamusume-localify]
+[umamusu-translate]
+[Umamusume Translation Discord](https://discord.gg/b2TDQKpu9v)  
+Link
+
+[umamusume-localify]: https://github.com/GEEKiDoS/umamusume-localify
+[tlg]: https://github.com/MinamiChiwa/Trainers-Legend-G
+[db-translate project]: https://github.com/noccu/umamusume-db-translate
+
+[tl-progress]: docs/tl-progress.md
+[translating]: docs/translating.md
+[id-structure]: docs/id-structure.md
