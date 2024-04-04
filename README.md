@@ -35,9 +35,8 @@ can safely ignore this and tap on More Info -> Install anyways to continue insta
 [Apache License 2.0](LICENSE)
 
 # Thanks to
-## Translator
-[fprtkdl](https://github.com/fprtkdl) | [vanaBV](https://github.com/vanaBV)
-===========================================================================
+Translator : [fprtkdl](https://github.com/fprtkdl) | [vanaBV](https://github.com/vanaBV)
+
 [UmaPatcher](https://github.com/LeadRDRK/UmaPatcher)
 
 [umamusume-localify](https://github.com/GEEKiDoS/umamusume-localify)
