@@ -35,7 +35,7 @@ can safely ignore this and tap on More Info -> Install anyways to continue insta
 [Apache License 2.0](LICENSE)
 
 # Thanks to
-
+[UmaPatcher]
 
 [UmaPatcher]: [https://github.com/LeadRDRK/UmaPatcher]
 [umamusume-localify]: https://github.com/GEEKiDoS/umamusume-localify
