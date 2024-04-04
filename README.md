@@ -2,7 +2,7 @@
 Umamusme patching tool for Android (translation/game enhancement patch).
 
 # Requirements
-- Android 7.0 or above
+- Android 9.0 or above
 
 # Download
 Download the latest release from the [Releases page](https://github.com/Seungpyo1007/MalDDalPatcher/releases).
