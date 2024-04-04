@@ -1,8 +1,7 @@
+[![Discord](https://img.shields.io/discord/1223088466020007956?logo=discord&logoColor=000000label=Discord)](https://discord.gg/b2TDQKpu9v)
+
 # MalDDalPatcher
 Umamusme patching tool for Android (translation/game enhancement patch).
-
-# Link
-[![Discord](https://img.shields.io/discord/1222345682749493259?logo=discord&logoColor=000000label=Discord)](https://discord.gg/b2TDQKpu9v)
 
 # Requirements
 - Android 9.0 or above
@@ -43,8 +42,8 @@ can safely ignore this and tap on More Info -> Install anyways to continue insta
 [umamusume-localify]
 [umamusu-translate]
 [Umamusume Translation Discord](https://discord.gg/b2TDQKpu9v)  
-Link
 
+[UmaPatcher]: [https://github.com/LeadRDRK/UmaPatcher]
 [umamusume-localify]: https://github.com/GEEKiDoS/umamusume-localify
 [tlg]: https://github.com/MinamiChiwa/Trainers-Legend-G
 [db-translate project]: https://github.com/noccu/umamusume-db-translate
