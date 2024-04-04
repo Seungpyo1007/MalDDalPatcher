@@ -2,7 +2,7 @@
 Umamusme patching tool for Android (translation/game enhancement patch).
 
 # Link
-[![](https://dcbadge.vercel.app/api/server/INVITEID)](https://discord.gg/b2TDQKpu9v)
+[![](https://dcbadge.vercel.app/api/server/b2TDQKpu9v)](https://discord.gg/b2TDQKpu9v)
 
 # Requirements
 - Android 9.0 or above
