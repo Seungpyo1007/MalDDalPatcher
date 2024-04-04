@@ -36,7 +36,7 @@ can safely ignore this and tap on More Info -> Install anyways to continue insta
 
 # Thanks to
 ## Translator
-[fprtkdl](https://github.com/fprtkdl)[vanaBV](https://github.com/vanaBV)
+[fprtkdl](https://github.com/fprtkdl) [vanaBV](https://github.com/vanaBV)
 
 [UmaPatcher](https://github.com/LeadRDRK/UmaPatcher)
 
