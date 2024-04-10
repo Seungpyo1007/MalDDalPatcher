@@ -33,7 +33,7 @@ you have to patch the updated APK to able to install it.
 **Note 1:** If you've already had an account on the game and you don't want to lose it when reinstalling
 the app, you can use the game's Data Link feature.
 
-**Note 2:** The signing key is unique for each installation of UmaPatcher. It is also a self-signed
+**Note 2:** The signing key is unique for each installation of MalDDalPatcher. It is also a self-signed
 key; during installation, Google Play Protect will warn you of installing an untrusted app. **You
 can safely ignore this and tap on More Info -> Install anyways to continue installation.**
 
