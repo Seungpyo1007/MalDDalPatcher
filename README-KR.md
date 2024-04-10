@@ -1,4 +1,4 @@
-[![](https://dcbadge.vercel.app/api/server/b2TDQKpu9v)](https://discord.gg/b2TDQKpu9v) ![](https://dcbadge.vercel.app/api/shield/731662377799647384)
+[![](https://dcbadge.vercel.app/api/server/bGyA4Zsh4u)](https://discord.gg/bGyA4Zsh4u) ![](https://dcbadge.vercel.app/api/shield/731662377799647384)
 # MalDDalPatcher
 Android용 Umamusme 패치 도구(번역/게임 강화 패치).
 
