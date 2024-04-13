@@ -45,6 +45,8 @@ Android용 Umamusme 패치 도구(번역/게임 강화 패치).
 
 [db-translate 프로젝트](https://github.com/noccu/umamusume-db-translate)
 
+[umamusume-localify-android](https://github.com/Kimjio/umamusume-localify-android)
+
 [tl-진행]: docs/tl-progress.md
 [번역 중]: docs/translating.md
 [id-구조]: docs/id-structure.md

@@ -51,6 +51,8 @@ Translator : [fprtkdl](https://github.com/fprtkdl) | [vanaBV](https://github.com
 
 [db-translate project](https://github.com/noccu/umamusume-db-translate)
 
+[umamusume-localify-android](https://github.com/Kimjio/umamusume-localify-android)
+
 [tl-progress]: docs/tl-progress.md
 [translating]: docs/translating.md
 [id-structure]: docs/id-structure.md
