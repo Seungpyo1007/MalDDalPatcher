@@ -1,38 +1,101 @@
-<!--
-  Copyright 2022 The Android Open Source Project
-  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
-  in compliance with the License. You may obtain a copy of the License at
-  http://www.apache.org/licenses/LICENSE-2.0
-  Unless required by applicable law or agreed to in writing, software distributed under the License
-  is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
-  or implied. See the License for the specific language governing permissions and limitations under
-  the License.
-  -->
-<resources>
-    <string name="app_name">Reply</string>
-    <string name="navigation_drawer">Navigation Drawer</string>
-    <string name="tab_inbox">Inbox</string>
-    <string name="tab_article">Articles</string>
-    <string name="tab_dm">Direct Messages</string>
-    <string name="tab_groups">Groups</string>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyEllipsis">
+    <string name="app_name">MalDDalPatcher</string>
+    <string name="home">Home</string>
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
 
-    <string name="profile">Profile</string>
-    <string name="search">Search</string>
-    <string name="reply">Reply</string>
-    <string name="reply_all">Reply All</string>
+    <!-- Home -->
+    <string name="game_installed">Game is installed</string>
+    <string name="game_not_installed">Game is not installed</string>
+    <string name="game_not_installed_info">Download an APK file and start patching!</string>
+    <string name="package_name_prefix">"Package: "</string>
+    <string name="version_name_prefix">"Version: "</string>
 
-    <string name="edit">Edit</string>
-    <string name="compose">Compose</string>
+    <string name="app_patcher_label">App patching</string>
+    <string name="patch">Patch</string>
 
-    <string name="empty_screen_title">Screen under construction</string>
-    <string name="empty_screen_subtitle">This screen is still under construction. This sample will help you learn about adaptive layouts in Jetpack Compose</string>
+    <!-- Settings -->
+    <string name="sync_on_startup">Sync translation repo on startup</string>
+    <string name="sync_on_startup_desc">Keep the translation repo up to date by syncing it when the app starts.</string>
+    <string name="git_remote">Git remote</string>
+    <string name="git_branch">Git branch</string>
+    <string name="check_for_updates_desc">Occasionally check for updates when the app starts.</string>
 
-    <string name="back_button">Back</string>
-    <string name="more_options_button">More options</string>
-    <string name="messages">Messages</string>
-    <string name="four_hours_ago">4 hrs ago</string>
+    <!-- About -->
+    <string name="app_desc">UM:PD Hachimi mod patching tool for Android.</string>
+    <string name="check_for_updates">Check for updates</string>
+    <string name="open_source_licenses">Open source licenses</string>
+    <string name="view_source_code">View source code</string>
+    <string name="support_me">Support me on Ko-fi</string>
 
-    <string name="search_emails">Search emails</string>
-    <string name="no_item_found">No item found</string>
-    <string name="no_search_history">No search history</string>
+    <!-- Patcher options -->
+    <string name="options">Options</string>
+    <string name="confirm">Confirm</string>
+    <string name="install_method">Install method</string>
+    <string name="install_method_desc">How you want the patch to be installed.</string>
+    <string name="direct_install">Direct install (root required)</string>
+    <string name="select_and_patch_a_file">Select and patch a file</string>
+    <string name="apk_file">APK file</string>
+    <string name="apk_file_desc">Which APK file you want to patch.</string>
+    <string name="get_apk_file_from_app">Get APK file from installed app</string>
+    <string name="save_patched_apk_file">Save patched APK file</string>
+
+    <!-- Patching -->
+    <string name="working">Working...</string>
+    <string name="completed">Completed</string>
+    <string name="patch_success_msg">[Patching successful]</string>
+    <string name="patch_failed_msg">[Patching failed]</string>
+    <string name="initial_sync_info">The translation repo is being synced for the first time. This might take a while.</string>
+    <string name="waiting_for_sync">Waiting for sync to complete...</string>
+    <string name="direct_install_unavailable">Direct install can only be used when the game is installed.</string>
+    <string name="root_required">Root permission is required for this operation.</string>
+    <string name="file_not_found_skip">File not found: \"%s\". Skipping.</string>
+    <string name="failed_to_read_file">Failed to read file: %s</string>
+    <string name="failed_to_read_file_skip">Failed to read file: \"%s\". Skipping.</string>
+    <string name="failed_to_copy_file">Failed to copy file: %s</string>
+    <string name="invalid_file_skip">Invalid file: \"%s\". Skipping.</string>
+    <string name="failed_to_create_dir">Failed to create directory: %s</string>
+    <string name="failed_to_copy_dir">Failed to copy directory: %s</string>
+    <string name="failed_to_open_dir">Failed to open directory: %s</string>
+    <string name="copying_file">Copying file: %s</string>
+    <string name="processing_file">Processing file: %s</string>
+    <string name="installing">Installing</string>
+    <string name="install_completed">Install completed</string>
+    <string name="install_failed">Install failed</string>
+    <string name="failed_to_list_dir">Failed to list directory: %s</string>
+    <string name="patching_files_n">Patching files (%d/%d)</string>
+
+    <!-- AppPatcher -->
+    <string name="syncing_app_libs">Syncing Hachimi libraries</string>
+    <string name="failed_to_download_app_libs">Failed to download Hachimi libraries</string>
+    <string name="failed_to_sync_app_libs">Failed to sync Hachimi libraries. Skipping.</string>
+    <string name="app_lib_updated">Hachimi has been updated</string>
+    <string name="using_app_lib_ver">Using Hachimi %s</string>
+    <string name="corrupted_file_abort_download">Corrupted file detected, aborting download</string>
+    <string name="patching_apk_file">Patching APK file</string>
+    <string name="aligning_apk_file">Aligning APK file</string>
+    <string name="signing_apk_file">Signing APK file</string>
+    <string name="unmounting_apk_file">Unmounting APK file</string>
+    <string name="copying_localized_data">Copying localized data</string>
+    <string name="mount_install_note">
+        \n
+        ********** NOTE **********\n
+        The modified app has now been mounted. However, this will be reverted whenever your
+        device restarts, which will undo the modification on some devices. To remount the app
+        after a restart, open UmaPatcher and tap on the Mount button in the App patcher section.
+    </string>
+    <string name="mount">Mount</string>
+    <string name="unmount">Unmount</string>
+    <string name="install_data">Install data</string>
+    <string name="allow_data_access_notice">Please allow the app to access Android/media</string>
+    <string name="apk_file_missing_lib">Invalid or incomplete APK file (missing native libraries)</string>
+
+    <!-- Other -->
+    <string name="loading">Loading...</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="update_available">Update available</string>
+    <string name="update_available_desc">A new version is available: %s\nOpen the download page?</string>
+    <string name="failed_to_check_for_updates">Failed to check for updates</string>
+    <string name="no_updates_available">No updates available</string>
 </resources>
