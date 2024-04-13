@@ -1,0 +1,168 @@
+import org.apache.tools.ant.filters.FixCrLfFilter
+import org.apache.tools.ant.filters.ReplaceTokens
+
+apply plugin: 'com.android.library'
+apply from: file(rootProject.file('module.gradle'))
+
+android {
+    flavorDimensions += "api"
+
+    compileSdkVersion = rootProject.ext.targetSdkVersion
+    buildToolsVersion = '33.0.2'
+    ndkVersion '25.0.8775105'
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+    }
+    buildFeatures {
+        buildConfig true
+        prefab true
+    }
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+            version "3.22.1"
+        }
+    }
+    productFlavors {
+        configureEach {
+            externalNativeBuild {
+                cmake {
+                    arguments "-DMODULE_NAME:STRING=$moduleLibraryName",
+                            "-DAPI=${name.toLowerCase()}"
+                }
+            }
+            buildConfigField("String", "API", "\"$name\"")
+        }
+
+        register("Zygisk") {
+            dimension = "api"
+            externalNativeBuild {
+                cmake {
+                    arguments += "-DMODULE_VERSION=$moduleVersionCode"
+                    arguments += "-DMODULE_VERSION_NAME:STRING=$moduleVersion"
+                }
+            }
+        }
+    }
+    namespace 'com.kimjio.umamusumelocalify'
+}
+
+repositories {
+    mavenLocal()
+}
+
+dependencies {
+}
+
+afterEvaluate {
+    android.libraryVariants.forEach { variant ->
+        def variantCapped = variant.name.capitalize()
+        def variantLowered = variant.name.toLowerCase()
+        def buildTypeCapped = variant.buildType.name.capitalize()
+        def buildTypeLowered = variant.buildType.name.toLowerCase()
+        def flavorCapped = variant.flavorName.capitalize()
+        def flavorLowered = variant.flavorName.toLowerCase()
+
+        def zipName = "${flavorLowered}-${magiskModuleId.replace('_', '-')}-${moduleVersion}-${buildTypeLowered}.zip"
+        def magiskDir = file("$outDir/magisk_module_${flavorLowered}_${buildTypeLowered}")
+
+        tasks.register("prepareMagiskFiles${variantCapped}", Sync) {
+            dependsOn("assemble$variantCapped")
+
+            def templatePath = "$rootDir/template/magisk_module"
+
+            into magiskDir
+
+            from(templatePath) {
+                exclude "module.prop", 'system.prop', "customize.sh", "service.sh"
+            }
+            from(templatePath) {
+                include 'module.prop'
+                expand([
+                        id         : "${flavorLowered}_${magiskModuleId}",
+                        name       : moduleName,
+                        version    : moduleVersion,
+                        versionCode: moduleVersionCode.toString(),
+                        author     : moduleAuthor,
+                        description: "$moduleDescription $flavorCapped version.",
+                        updateJson : "${moduleUpdateJson}-${flavorLowered}.json",
+                        requirement: "Requires Magisk 24.0+ and Zygisk enabled",
+                        api        : flavorCapped
+                ])
+                filter(FixCrLfFilter.class,
+                        eol: FixCrLfFilter.CrLf.newInstance("lf"))
+            }
+            from(templatePath) {
+                include 'system.prop'
+                expand([
+                        version: moduleVersion,
+                ])
+                filter(FixCrLfFilter.class,
+                        eol: FixCrLfFilter.CrLf.newInstance("lf"))
+            }
+            from(templatePath) {
+                include("customize.sh")
+                filter(ReplaceTokens.class, tokens: [
+                        "FLAVOR"         : flavorLowered,
+                        "MODULE_LIB_NAME": moduleLibraryName
+                ])
+                filter(FixCrLfFilter.class,
+                        eol: FixCrLfFilter.CrLf.newInstance("lf"))
+            }
+            from(templatePath) {
+                include("service.sh")
+                filter(ReplaceTokens.class, tokens: [
+                        "API"            : flavorLowered,
+                        "MODULE_ID"      : magiskModuleId,
+                        "MODULE_LIB_NAME": moduleLibraryName
+                ])
+                filter(FixCrLfFilter.class,
+                        eol: FixCrLfFilter.CrLf.newInstance("lf"))
+            }
+            from("$buildDir/intermediates/stripped_native_libs/$variantLowered/out/lib") {
+                into 'lib'
+            }
+
+            from("$buildDir/intermediates/javac/$variantLowered/") {
+                exclude 'classes'
+                doFirst {
+                    def sdkDir = project.android.sdkDirectory;
+                    def buildToolVersion = project.android.buildToolsVersion;
+                    exec {
+                        workingDir "$buildDir/intermediates/javac/$variantLowered"
+                        commandLine "$sdkDir/build-tools/$buildToolVersion/d8${System.properties['os.name'].toLowerCase().contains('windows'.toLowerCase()) ? ".bat" : ''}",
+                                "$buildDir/intermediates/javac/$variantLowered/classes/com/kimjio/umamusumelocalify/Hooker.class",
+                                "$buildDir/intermediates/javac/$variantLowered/classes/com/kimjio/umamusumelocalify/MethodCallback.class"
+                    }
+                }
+            }
+        }
+
+        tasks.register("zip${variantCapped}", Zip) {
+            dependsOn("prepareMagiskFiles${variantCapped}")
+            from magiskDir
+            archiveFileName = zipName
+            destinationDirectory = outDir
+        }
+
+        tasks.register("push${variantCapped}", Exec) {
+            dependsOn("zip${variantCapped}")
+            workingDir outDir
+            commandLine android.adbExecutable, "push", zipName, "/data/local/tmp/"
+        }
+
+        tasks.register("flash${variantCapped}", Exec) {
+            dependsOn("push${variantCapped}")
+            commandLine android.adbExecutable, "shell", "su", "-c",
+                    "magisk --install-module /data/local/tmp/${zipName}"
+        }
+
+        tasks.register("flashAndReboot${variantCapped}", Exec) {
+            dependsOn("flash${variantCapped}")
+            commandLine android.adbExecutable, "shell", "reboot"
+        }
+
+        variant.assembleProvider.get().finalizedBy("zip${variantCapped}")
+    }
+}
