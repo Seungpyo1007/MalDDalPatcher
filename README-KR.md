@@ -1,3 +1,9 @@
+<p align="center"> 
+  <a href="README.md">English</a> 
+  ·
+  <a href="README-KR.md">한국어</a> 
+</p>
+
 [![](https://dcbadge.vercel.app/api/server/bGyA4Zsh4u)](https://discord.gg/bGyA4Zsh4u) ![](https://dcbadge.vercel.app/api/shield/731662377799647384)
 # MalDDalPatcher
 Android용 Umamusme 패치 도구(번역/게임 강화 패치).
