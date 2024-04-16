@@ -50,12 +50,13 @@ android {
         }
     }
     namespace 'com.leadrdrk.umapatcher'
+    //임시 닉네임
 }
 
-// 툴체인 문제로 인해 사망
-//kotlin {
-//    jvmToolchain(8)
-//}
+// 툴체인 문제로 인해 사망(Arm 기준)
+kotlin {
+    jvmToolchain(8)
+}
 
 aboutLibraries {
     configPath = "config"
