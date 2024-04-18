@@ -54,9 +54,9 @@ android {
 }
 
 // 툴체인 문제로 인해 사망(Arm 기준)
- {
-    jvmToolchain(8)
-}
+// {
+//    jvmToolchain(8)
+//}
 
 aboutLibraries {
     configPath = "config"
